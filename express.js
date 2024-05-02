@@ -28,7 +28,7 @@ app.use(express.static("assets"));
 
 //midleware para filtrar ruta //abracadabra/juego/usuario
 
-app.use("/abracadabra/juego/usuario", (req, res, next) => {
+app.use("/abracadabra/juego/:usuario", (req, res, next) => {
     const usuario = req.params.usuario
 
     if ( usuarios.usuarios.find(data => data == usuarioReq) ) {
